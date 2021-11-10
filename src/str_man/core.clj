@@ -21,8 +21,8 @@
 
 ;; capitalise the first letter of the String
 ;; return string with capitalize 
-(defn capitalize-str [s]
-  (println "String Capitalize :" (str/capitalize s)))
+(defn capitalize-str [str]
+  (println "String Capitalize ::" (str/capitalize str)))
 
 ;; uppercase the given string
 ;; return the uppercase string 
@@ -39,9 +39,9 @@
 (defn char-count[s]
   (println "No of character in string :"(count s)))
 
-;; divede the given string to start and end point given 
-(defn sub-str[s]
-  (println"sub String from 3-6:"(subs s 3 6)))
+;; divide the given string to start and end point given
+(defn sub-str[s from end]
+  (println"sub String from 3-6:"(subs s from end)))
 
 ;;compare the given two string
 ;; Returns a negative number, zero, or a positive number when ‘s1’ is logically 'less than', 'equal to', or 'greater than' ‘s2’.
@@ -50,7 +50,7 @@
 
 ;;reverse the given string 
 (defn rev-str[s]
-  (println s "reverce string :"(reverse s)))
+  (println s "reverse string :"(reverse s)))
 
 ;join the Collection element with provided string 
 (defn join-str[s col]
@@ -80,7 +80,7 @@
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
-  (println "welcome to String manupulation")
+  (println "welcome to String manipulation")
   (println "Please Enter string")
   (check (read-line))
   )
