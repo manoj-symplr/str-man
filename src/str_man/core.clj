@@ -4,16 +4,35 @@
 
 (defn check [s]
   (println "Is String blank :"(str/blank? s))
-  (println "String Capitaliza :" (str/capitalize s))
-  (println "String Upper-case :" (str/upper-case s))
-  (println "String lowercase :" (str/lower-case s))
-  (println "Is String End-with '.' :" (str/ends-with? s "."))
-  (println "Is String Include 'manoj':" (str/includes? s "manoj"))
   (println "String Index 'j':" (str/index-of s "j"))
   (println "String Index 'm' from 5:" (str/index-of s "m" 5))
   (println "String last-Index 'a' :" (str/last-index-of s "a"))
    (println "String last-Index 'a' from 5:" (str/last-index-of s "a" 5))
 )
+;; given str2 present in str or not
+;; return true and false
+(defn str-include-str1 [str str2]
+  (println "Is String Include 'manoj':" (str/includes? str str2)))
+
+;; given string ends with end or not
+;; return true or false 
+(defn str-end-with [s end]
+  (println "Is String End-with '.' :" (str/ends-with? s end)))
+
+;; capitalise the first letter of the String
+;; return string with capitalize 
+(defn capitalize-str [s]
+  (println "String Capitalize :" (str/capitalize s)))
+
+;; uppercase the given string
+;; return the uppercase string 
+(defn uppercase-str [s]
+  (println "String Upper-case :" (str/upper-case s)))
+
+;; lowercase the given string
+;; return the lowercase string 
+(defn lowercase-str [s]
+   (println "String lowercase :" (str/lower-case s)))
 
 ;;to count the no of Character in iven string
 ;; return the count of characters
