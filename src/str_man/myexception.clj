@@ -6,3 +6,9 @@
     (println "eligible for vote")
     (throw (str_man.myexception. "you are under age")))
   )
+
+(defn valid-gender [gender]
+  (if (or (= gender "male") (= gender "female") (= gender "transgender"))
+    (println "valid gender")
+    (throw (str_man.myexception. "Un-valid gender")))
+  )

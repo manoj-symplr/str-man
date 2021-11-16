@@ -1,6 +1,9 @@
 (ns str-man.core
   (:gen-class)
-  (:require [clojure.string :as str]))
+  (:require [clojure.string :as str]
+            [str_man.myexception :as excep]
+            [str-man.logic :as logical]
+            [str-man.global-exception :as global-excep]))
 
 (defn check [s]
   (println "Is String blank :"(str/blank? s))
@@ -38,7 +41,7 @@
 
 ;;to count the no of Character in iven string
 ;; return the count of characters
-(defn char-count[s]
+(defn char-count [s]
   (println "No of character in string :"(count s)))
 
 ;; divide the given string to start and end point given
@@ -54,7 +57,8 @@
 (defn rev-str[s]
   (println s "reverse string :"(reverse s)))
 
-;join the Collection element with provided string 
+;join the Collection element with provided string
+;join string in collection after first element of collection
 (defn join-str[s col]
   (println "join "col "with " s ":"(str/join s col)))
 
@@ -84,5 +88,22 @@
   [& args]
   (println "welcome to String manipulation")
   (println "Please Enter string")
-  (check (read-line))
+  ;(str-include-str1 (read-line) (read-line))
+  ;(str-end-with (read-line) (read-line))
+  ;(capitalize-str (read-line))
+  ;(uppercase-str (read-line))
+  ;(lowercase-str (read-line))
+  ;(char-count (read-line))
+  ;(sub-str (read-line) (java.lang.Integer/parseInt (read-line))(java.lang.Integer/parseInt (read-line)))
+  ;(compare-str (read-line) (read-line))
+  ;(rev-str (read-line))
+  ;(join-str "manoj" ["i am " " amale"])
+  ;(split-str (read-line) (read-line))
+  ;(replace-str (read-line) (read-line) (read-line))
+  ;(trim-str (read-line))
+  ;(triml-str (read-line))
+  ;(trimr-str (read-line))
+  (global-excep/try-catch (excep/valid-gender (read-line)))
+  ;(try (excep/valid-gender (read-line))
+  ;     (catch Exception e (println (.getMessage e))))
   )
